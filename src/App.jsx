@@ -17,7 +17,7 @@ function App() {
       signMessage:
         "0x645cf8784f6d0ff9b714d75ae5eac3dacfc6f1ff2a7e42bf77f1e2823404c0a77a40916fa281df9daec77ce655c12fa1adefba67eddbe14066ea129034388c8e1b",
     };
-    axios.get("/verify",option).then((res) => {
+    axios.get("http://192.168.38.16:4000/verify",option).then((res) => {
       console.log(res);
     });
   }, []);
