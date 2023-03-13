@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import reactLogo from "./assets/react.svg";
 import Html5QrcodePlugin from "./Qr";
 
