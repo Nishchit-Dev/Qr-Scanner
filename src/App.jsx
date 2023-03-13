@@ -8,13 +8,17 @@ function App() {
   const [results,setResult] = useState(null)
   const onNewScanResult = (decodedText, decodedResult) => {
     // handle decoded results here
-    console.log(decodedText)
+    if(typeof decodedResult == "object"){
+
+    console.log(JSON.parse(decodedText).publicKey)
     setData(JSON.parse(decodedText))
 
     axios.post(Config.baseUrl+"/verify",option).then((res) => {
       console.log(res);
       setResult(res)
     });
+  }
+
   };
   
 
