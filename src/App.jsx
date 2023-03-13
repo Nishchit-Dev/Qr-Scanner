@@ -4,6 +4,7 @@ import reactLogo from "./assets/react.svg";
 import Html5QrcodePlugin from "./Qr";
 import Config from "./config";
 function App() {
+  const [data,setData] = useState(null)
   const onNewScanResult = (decodedText, decodedResult) => {
     // handle decoded results here
     console.log(decodedText)
@@ -34,6 +35,9 @@ function App() {
           qrCodeSuccessCallback={onNewScanResult}
         ></Html5QrcodePlugin>
       </h1>
+      <p>
+        {data != null? data.publicKey:''}
+      </p>
     </div>
   );
 }
