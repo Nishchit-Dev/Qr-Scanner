@@ -13,7 +13,7 @@ function App() {
     console.log(JSON.parse(decodedText).publicKey)
     setData(JSON.parse(decodedText))
 
-    axios.post(Config.baseUrl+"/verify",option).then((res) => {
+    axios.post(Config.baseUrl+"/verify",JSON.parse(decodedText)).then((res) => {
       console.log(res);
       setResult(res)
     });
