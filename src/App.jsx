@@ -16,17 +16,7 @@ function App() {
       setResult(res)
     });
   };
-  useEffect(() => {
-    let option = {
-      publicKey: data.publicKey,
-      contractAddress: data.contractAddress,
-      tokenId: data.tokenId,
-      hash: data.signMessage,
-      signMessage:
-        data.hash,
-    };
-   
-  }, []);
+  
 
   return (
     <div className="App">
