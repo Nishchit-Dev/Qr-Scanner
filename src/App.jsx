@@ -39,7 +39,7 @@ function App() {
         ></Html5QrcodePlugin>
       </h1>
       <p>
-        {results ? <p>Verification: ${results.verification}</p>:<p>Verification: ${results.verification}</p>}
+        {results != null ? <p>Verification: ${results.verification}</p>:<p>Verification: ${false}</p>}
       </p>
     </div>
   );
