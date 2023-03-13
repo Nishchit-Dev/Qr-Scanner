@@ -15,7 +15,7 @@ function App() {
 
     axios.post(Config.baseUrl+"/verify",JSON.parse(decodedText)).then((res) => {
       console.log(res);
-      setResult(res)
+      setResult(res.data)
     });
   }
 
@@ -33,7 +33,7 @@ function App() {
         ></Html5QrcodePlugin>
       </h1>
       <p>
-        {results != null ? <p>Verification: ${results.verification}</p>:<p>Verification: ${false}</p>}
+        {results != null ? <p>Verification: Successful</p>:<p>Verification: Failed</p>}
       </p>
     </div>
   );
